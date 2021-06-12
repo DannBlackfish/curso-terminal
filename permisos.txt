@@ -1,0 +1,61 @@
+Tipos de archivos
+Atributo
+Tipo de archivo
+-
+Un archivo normal
+d
+Un directorio
+l
+Un link simbólico
+b
+Un archivo de bloque especial. Son archivos que manejan la información de los bloques de datos como una USB
+Tipos de modo
+Dueño
+Grupo
+World
+rwx
+r-x
+r-x
+1 1 1
+1 0 1
+1 0 1
+Dueño: Persona que crea el archivo
+Grupo: Archivo compartido por diferentes usuarios
+World: Cualquiera que no entre en la categoría de dueño y grupo
+
+Read
+Write 
+Execute 
+
+Se puede agregar un archivo con el operador mayor que ">" de esta manera:
+> mitexto.txt
+
+Cat (modificador de texto)
+cat > mitexto.txt
+
+chmod (change mode) Para modificar permisos 
+MODO OCTAL:
+chmod 755
+(7)usuario modo de escritura lectura y ejecución
+(5)grupo y mundo read y ejecución
+
+MODO SIMBÓLICO:
+Para el usuario quita el permiso de lectura
+chmod u-r mitexto.txt
+-r quita el permiso de lectura 
++r agrega el permiso de lectura
+
+Modo avanzado al usuario le quitas el modo ejecutable y al grupo y mundo le agregar el write:
+chmod u-x,go=w mi texto.txt
+
+Como cambiar de usuario
+- whoami ¿Quién somos? Muestra el usuario 
+- id (información del usuario)
+- su (swift user cambiar a usuario)
+- sudo (temporalmente te permite ser el usuario root, no te loggea como root pero te da los permisos )
+
+Usuario root (nos permite hace todo) pide la contraseña administrativa 
+
+Como cambiar contraseña de usuarios 
+- passwd (te permite cambiar la contraseña)
+- No dejar usuario root por defecto por temas de seguridad
